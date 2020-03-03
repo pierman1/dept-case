@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 50px 0 0;
+
+  @include mq($from: mobile) {
+    margin: 0;
+  }
+}
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+}
