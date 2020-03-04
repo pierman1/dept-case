@@ -52,7 +52,7 @@ export default {
   justify-content: center;
   position: relative;
 
-  @include mq($from: mobile) {
+  @include mq($from: tablet) {
     flex-direction: row;
   }
 
@@ -61,7 +61,7 @@ export default {
     max-width: 1200px;
     padding-top: 60px;
 
-    @include mq($from: mobile) {
+    @include mq($from: tablet) {
       padding-top: 100px;
       padding-bottom: 100px;
       padding-right: 50px;
