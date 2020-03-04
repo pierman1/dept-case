@@ -39,10 +39,7 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    '@nuxtjs/style-resources',
-    '@nuxtjs/axios'
-  ],
+  modules: [ '@nuxtjs/style-resources', '@nuxtjs/axios' ],
   /*
    ** Stylesss!
    */
@@ -56,9 +53,9 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
+  /*
+  ** You can extend webpack config here
+  */
     extend(config, ctx) { }
   }
 }
