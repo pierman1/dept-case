@@ -33,6 +33,9 @@ export default {
           cases: res.data.cases
         }
       })
+      .catch((err) => {
+        console.log('err', err)
+      })
   }
 }
 </script>

@@ -11,7 +11,7 @@ const queryStringMixin = () => {
         } else {
           query[key] = value
         }
-        this.$router.replace({ query })
+        this.$router.push({ query })
       },
       getQueryStringFromUrl() {
         return this.createQueryStringFromObject(this.$route.query)
@@ -19,7 +19,7 @@ const queryStringMixin = () => {
       resetPageQueryString(key, value) {
         const query = Object.assign({}, this.$route.query)
         delete query.page
-        this.$router.replace({ query })
+        this.$router.push({ query })
       }
     }
   }
