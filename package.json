@@ -21,7 +21,8 @@
     "express": "^4.16.4",
     "nuxt": "^2.0.0",
     "nuxt-sass-resources-loader": "^2.0.5",
-    "sass-mq": "^5.0.1"
+    "sass-mq": "^5.0.1",
+    "vee-validate": "^3.2.5"
   },
   "devDependencies": {
     "@bazzite/nuxt-optimized-images": "^0.3.0",

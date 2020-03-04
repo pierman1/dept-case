@@ -1,6 +1,7 @@
 <template>
   <main>
     <hero />
+    <contact />
     <filters />
   </main>
 </template>
@@ -9,11 +10,13 @@
 import axios from 'axios'
 import Hero from '~/components/hero/index.vue'
 import Filters from '~/components/filters/index.vue'
+import Contact from '~/components/contact/ContactSection.vue'
 
 export default {
   components: {
     Hero,
-    Filters
+    Filters,
+    Contact
   },
   data() {
     return {
