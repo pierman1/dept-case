@@ -1,31 +1,41 @@
 <template>
   <main>
     <hero />
-    <figure class="picture">
-      <picture>
-        <source src="~assets/images/florensis.png?webp" type="image/webp" />
-        <source src="~assets/images/florensis.png" type="image/png" />
-        <img
-          src="~assets/images/florensis.png"
-          class="lazyload"
-          alt="Alternate text for the image"
-        />
-      </picture>
-    </figure>
+    <filters />
   </main>
 </template>
 
 <script>
+import axios from 'axios'
 import Hero from '~/components/hero/index.vue'
+import Filters from '~/components/filters/index.vue'
 
 export default {
   components: {
-    Hero
+    Hero,
+    Filters
   },
   data() {
     return {
       data: ''
     }
+  },
+  asyncData({ params, query, store }) {
+    console.log('asyncData', params, query)
+    return axios
+      .get('http://localhost:3000/api/v1/cases', {
+        params: query
+      })
+      .then((res) => {
+        console.log('response', res.data.cases)
+        store.commit('cases/SET_CASES', res.data.cases)
+        return {
+          cases: res.data.cases
+        }
+      })
+      .catch((err) => {
+        console.log('err', err)
+      })
   }
 }
 </script>

@@ -1,0 +1,237 @@
+[
+  {
+    "id": "1",
+    "caseDescription": "A summer island in the Netherlands",
+    "caseParty": "Bol.com",
+    "caseImage": "bolcom.png",
+    "industries": [
+      "fashion"
+    ],
+    "type": [
+      "work"
+    ]
+  },
+  {
+    "id": "2",
+    "caseDescription": "A summer island in the Netherlands",
+    "caseParty": "Kempen",
+    "caseImage": "kempen.png",
+    "industries": [
+      "ecom",
+      "fashion"
+    ],
+    "type": [
+      "work",
+      "rebrand"
+    ]
+  },
+  {
+    "id": "3",
+    "caseDescription": "Beautiful design meets innovative technology",
+    "caseParty": "Philips",
+    "caseImage": "philips.png",
+    "industries": [
+      "ecom",
+      "fashion"
+    ],
+    "type": [
+      "work",
+      "rebrand"
+    ]
+  },
+  {
+    "id": "4  ",
+    "caseDescription": "A 100 years of Mondriaan & De Stijl",
+    "caseParty": "Gemeentemuseum",
+    "caseImage": "gemeentemuseum.png",
+    "industries": [
+      "ecom",
+      "fashion"
+    ],
+    "type": [
+      "work",
+      "rebrand"
+    ]
+  },
+  {
+    "id": "5",
+    "caseDescription": "Rethinking the entire online ecosystem",
+    "caseParty": "Florensis",
+    "caseImage": "florensis.png",
+    "industries": [
+      "ecom",
+      "fashion"
+    ],
+    "type": [
+      "work"
+    ]
+  },
+  {
+    "id": "6",
+    "caseDescription": "Tapping into Ireland’s unique gaming culture and bringing a fresh flavour to their Xbox social media channels",
+    "caseParty": "Microsoft",
+    "caseImage": "florensis.png",
+    "industries": [
+      "ecom"
+    ],
+    "type": [
+      "work"
+    ]
+  },
+  {
+    "id": "7",
+    "caseDescription": "Integrating existing content into O’Neill’s new e-commerce platform",
+    "caseParty": "O'Neill",
+    "caseImage": "florensis.png",
+    "industries": [
+      "ecom"
+    ],
+    "type": [
+      "work"
+    ]
+  },
+  {
+    "id": "8",
+    "caseDescription": "Delivering clarity on a global scale",
+    "caseParty": "Ge lichting",
+    "caseImage": "gemeentemuseum.png",
+    "industries": [
+      "ecom"
+    ],
+    "type": [
+      "work"
+    ]
+  },
+  {
+    "id": "9",
+    "caseDescription": "Swipe to find your next holiday destination",
+    "caseParty": "Tui",
+    "caseImage": "tui.png",
+    "industries": [
+      "ecom"
+    ],
+    "type": [
+      "work"
+    ]
+  },
+  {
+    "id": "10",
+    "caseDescription": "Rethinking the entire online ecosystem",
+    "caseParty": "Florensis",
+    "caseImage": "florensis.png",
+    "industries": [
+      "ecom"
+    ],
+    "type": [
+      "work"
+    ]
+  },
+  {
+    "id": "11",
+    "caseDescription": "Enhancing customer experience for personalised holiday planning using real time data",
+    "caseParty": "Butlins",
+    "caseImage": "tui.png",
+    "industries": [
+      "ecom"
+    ],
+    "type": [
+      "work"
+    ]
+  },
+  {
+    "id": "12",
+    "caseDescription": "Predicting booking behavior for holidays with smart data, voice search and machine learning",
+    "caseParty": "Vacanselect",
+    "caseImage": "tui.png",
+    "industries": [
+      "ecom"
+    ],
+    "type": [
+      "work"
+    ]
+  },
+  {
+    "id": "13",
+    "caseDescription": "Rethinking the entire online ecosystem",
+    "caseParty": "Florensis",
+    "caseImage": "florensis.png",
+    "industries": [
+      "ecom"
+    ],
+    "type": [
+      "work"
+    ]
+  },
+  {
+    "id": "14",
+    "caseDescription": "A campaign for the limited edition letter packs",
+    "caseParty": "Chocomel",
+    "caseImage": "chocomel.png",
+    "industries": [
+      "ecom"
+    ],
+    "type": [
+      "work"
+    ]
+  },
+  {
+    "id": "15",
+    "caseDescription": "Live like a champion with Jerome Booteng",
+    "caseParty": "JBL",
+    "caseImage": "jbl.png",
+    "industries": [
+      "ecom"
+    ],
+    "type": [
+      "work"
+    ]
+  },
+  {
+    "id": "16",
+    "caseDescription": "Innovative SEO and content strategy for Zalando",
+    "caseParty": "Zalando",
+    "caseImage": "zalando.png",
+    "industries": [
+      "ecom"
+    ],
+    "type": [
+      "work"
+    ]
+  },
+  {
+    "id": "17",
+    "caseDescription": "The search for the most influential book ever",
+    "caseParty": "Koninklijke bibliotheek",
+    "caseImage": "koninklijke-bibliotheek.png",
+    "industries": [
+      "ecom"
+    ],
+    "type": [
+      "work"
+    ]
+  },
+  {
+    "id": "18",
+    "caseDescription": "Delivering complex commerce solutions",
+    "caseParty": "Liberty Global",
+    "caseImage": "liberty-global.png",
+    "industries": [
+      "ecom"
+    ],
+    "type": [
+      "work"
+    ]
+  },
+  {
+    "id": "18",
+    "caseDescription": "Swipe to find your next holiday destination",
+    "caseParty": "Arla",
+    "caseImage": "arla.png",
+    "industries": [
+      "ecom"
+    ],
+    "type": [
+      "work"
+    ]
+  }
+]
