@@ -1,0 +1,125 @@
+<template>
+  <nuxt-link to="/">
+    <article class="case-base">
+      <picture class="case-base__picture">
+        <img
+          v-if="data.caseImage && !hideImage"
+          :src="require(`../../assets/images/${data.caseImage}`)"
+        />
+      </picture>
+
+      <div class="case-base__party">
+        {{ data.caseParty }}
+      </div>
+
+      <h2 class="case-base__title">
+        {{ data.caseDescription }}
+      </h2>
+
+      <nuxt-link class="case-link" to="/">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="7"
+          height="9"
+          viewBox="0 0 7 9"
+        >
+          <path fill="#1A18F7" fill-rule="evenodd" d="M0 9l7-4.505L0 0z" />
+        </svg>
+        <span>
+          View case
+        </span>
+      </nuxt-link>
+    </article>
+  </nuxt-link>
+</template>
+
+<script>
+export default {
+  name: 'CaseBase',
+  props: {
+    data: {
+      type: Object,
+      required: true
+    },
+    hideImage: {
+      type: Boolean,
+      default: false
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.case-base {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+
+  @include mq($from: mobile) {
+    margin-bottom: 80px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 18px;
+    object-fit: fill;
+  }
+
+  &__picture {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: 250ms box-shadow;
+    }
+  }
+
+  .case-link {
+    font-family: 'Arial';
+    font-weight: bold;
+    position: relative;
+    color: $dept-blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    svg {
+      margin-right: 0.625rem;
+      transition: 250ms margin-right;
+    }
+  }
+
+  &__party {
+    color: $dept-darkgrey;
+    font-family: 'Arial';
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-weight: 400;
+    margin: 12px 0 14px;
+  }
+
+  &:hover {
+    .case-base__picture {
+      &:before {
+        box-shadow: 0 0 0 10px #fff inset;
+      }
+    }
+
+    .case-link {
+      svg {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+</style>

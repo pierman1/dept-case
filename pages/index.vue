@@ -1,8 +1,9 @@
 <template>
   <main>
     <hero />
-    <contact />
     <filters />
+    <grid />
+    <contact />
   </main>
 </template>
 
@@ -11,12 +12,14 @@ import axios from 'axios'
 import Hero from '~/components/hero/index.vue'
 import Filters from '~/components/filters/index.vue'
 import Contact from '~/components/contact/ContactSection.vue'
+import Grid from '~/components/grid/index.vue'
 
 export default {
   components: {
     Hero,
     Filters,
-    Contact
+    Contact,
+    Grid
   },
   data() {
     return {
