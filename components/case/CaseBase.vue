@@ -1,12 +1,23 @@
 <template>
   <nuxt-link to="/">
     <article class="case-base">
-      <picture class="case-base__picture">
-        <img
-          v-if="data.caseImage && !hideImage"
-          :src="require(`../../assets/images/${data.caseImage}`)"
-        />
-      </picture>
+      <figure class="case-base__picture">
+        <picture>
+          <source
+            :data-srcset="require(`~/assets/images/${data.caseImage}?webp`)"
+            type="image/webp"
+          />
+          <source
+            :data-srcset="require(`~/assets/images/${data.caseImage}`)"
+            type="image/png"
+          />
+          <img
+            class="lazyload image"
+            v-if="data.caseImage && !hideImage"
+            :data-src="require(`~/assets/images/${data.caseImage}`)"
+          />
+        </picture>
+      </figure>
 
       <div class="case-base__party">
         {{ data.caseParty }}
@@ -16,19 +27,21 @@
         {{ data.caseDescription }}
       </h2>
 
-      <nuxt-link class="case-link" to="/">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="7"
-          height="9"
-          viewBox="0 0 7 9"
-        >
-          <path fill="#1A18F7" fill-rule="evenodd" d="M0 9l7-4.505L0 0z" />
-        </svg>
-        <span>
-          View case
-        </span>
-      </nuxt-link>
+      <client-only>
+        <nuxt-link class="case-link" :to="`/cases/${data.id}`">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="7"
+            height="9"
+            viewBox="0 0 7 9"
+          >
+            <path fill="#1A18F7" fill-rule="evenodd" d="M0 9l7-4.505L0 0z" />
+          </svg>
+          <span>
+            View case
+          </span>
+        </nuxt-link>
+      </client-only>
     </article>
   </nuxt-link>
 </template>
@@ -59,7 +72,7 @@ export default {
     margin-bottom: 80px;
   }
 
-  img {
+  .image {
     width: 100%;
     height: auto;
     margin-bottom: 18px;

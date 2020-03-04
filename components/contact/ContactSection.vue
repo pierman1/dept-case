@@ -73,8 +73,12 @@ export default {
     width: 100%;
 
     @include mq($from: tablet) {
-      width: 50%;
+      width: 35%;
       flex-direction: row;
+
+      &:nth-child(2) {
+        width: 65%;
+      }
     }
   }
 }

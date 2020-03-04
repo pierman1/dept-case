@@ -28,7 +28,12 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    {
+      src: '~/plugins/lazysizes.client.js',
+      mode: 'client'
+    }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -39,7 +44,11 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: [ '@nuxtjs/style-resources', '@nuxtjs/axios' ],
+  modules: [
+    '@nuxtjs/style-resources',
+    '@nuxtjs/axios',
+    '@bazzite/nuxt-optimized-images'
+  ],
   /*
    ** Stylesss!
    */
@@ -53,7 +62,7 @@ module.exports = {
     inlineImageLimit: -1,
     handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
     optimizeImages: true,
-    optimizeImagesInDev: false,
+    optimizeImagesInDev: true,
     defaultImageLoader: 'img-loader',
     mozjpeg: {
       quality: 85
@@ -77,6 +86,11 @@ module.exports = {
   /*
   ** You can extend webpack config here
   */
-    extend(config, ctx) { }
+    extend(config, { isDev, isClient, loaders: { vue } }) {
+      if (isClient) {
+        vue.transformAssetUrls.img = ['data-src', 'src']
+        vue.transformAssetUrls.source = ['data-srcset', 'srcset']
+      }
+    }
   }
 }
