@@ -2,7 +2,6 @@
   <ValidationObserver v-slot="{ handleSubmit }">
     <form ref="form" class="form" @submit.prevent="handleSubmit(submit)">
       <slot />
-      <button type="submit">Send</button>
     </form>
   </ValidationObserver>
 </template>

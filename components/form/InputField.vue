@@ -3,7 +3,8 @@
     <label :for="name">
       {{ name }}
     </label>
-    <input
+    <component
+      :is="tag"
       class="input"
       :id="name"
       :type="type"
@@ -42,6 +43,13 @@ export default {
     value: {
       type: String,
       default: ''
+    },
+    tag: {
+      type: String,
+      default: 'input',
+      validator: (value) => {
+        return ['input', 'textarea'].includes(value)
+      }
     }
   },
   data() {
@@ -78,17 +86,33 @@ export default {
     font-weight: bold;
   }
 
-  input {
+  input,
+  textarea {
     border: none;
     font-size: 1rem;
     padding: 0.75rem 0;
     border-bottom: 1px solid $dept-border-color;
+    resize: none;
+    transition: 250ms all;
+
+    &:focus {
+      outline: none;
+      border-bottom-color: $dept-blue;
+    }
+  }
+
+  textarea {
+    min-height: 97px;
   }
 
   .input__error {
     margin-top: 0.6875rem;
     font-size: 0.875rem;
     color: $dept-warning-red;
+
+    input {
+      border-bottom-color: $dept-warning-red;
+    }
   }
 }
 </style>

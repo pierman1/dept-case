@@ -1,13 +1,15 @@
 <template>
   <section class="contact-section">
-    <div class="container container--flex">
-      <div class="col">
-        <h3 class="title title--xl">
-          Question? We are here to help!
-        </h3>
-      </div>
-      <div class="col">
-        <contact-form />
+    <div class="container">
+      <div class="inner">
+        <div class="col">
+          <h3 class="title title--xl">
+            Question? We are here to help!
+          </h3>
+        </div>
+        <div class="col">
+          <contact-form />
+        </div>
       </div>
     </div>
   </section>
@@ -33,23 +35,37 @@ export default {
   }
 
   .title {
-    max-width: 300px;
     line-height: 1;
     text-transform: uppercase;
     margin: 0;
+    text-align: center;
+    margin-bottom: 1.75rem;
+
+    @include mq($from: tablet) {
+      text-align: left;
+    }
 
     &--xl {
-      font-size: 3.75rem;
+      font-size: 1.875rem;
       font-weight: 400;
+
+      @include mq($from: tablet) {
+        font-size: 3.75rem;
+      }
+    }
+
+    @include mq($from: tablet) {
+      max-width: 300px;
     }
   }
 
-  .container--flex {
+  .inner {
     display: flex;
     flex-direction: column;
 
     @include mq($from: tablet) {
       flex-direction: row;
+      max-width: 1000px;
     }
   }
 
