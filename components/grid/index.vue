@@ -1,5 +1,5 @@
 <template>
-  <div class="grid" :class="{ loading }">
+  <section class="grid" :class="{ loading }">
     <div class="container container--flex" v-if="cases">
       <div class="wrapper">
         <case-base
@@ -62,7 +62,7 @@
         />
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

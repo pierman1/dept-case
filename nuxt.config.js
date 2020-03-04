@@ -5,6 +5,9 @@ module.exports = {
    */
   head: {
     title: process.env.npm_package_name || '',
+    htmlAttrs: {
+      lang: 'nl',
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -39,6 +42,7 @@ module.exports = {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
+    'nuxt-compress',
     '@nuxtjs/eslint-module'
   ],
   /*
@@ -47,7 +51,8 @@ module.exports = {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/axios',
-    '@bazzite/nuxt-optimized-images'
+    '@bazzite/nuxt-optimized-images',
+    "nuxt-compress"
   ],
   /*
    ** Stylesss!

@@ -1,5 +1,5 @@
 <template>
-  <div class="filters">
+  <section class="filters">
     <div class="container">
       <span>
         Show me all
@@ -18,7 +18,7 @@
         />
       </span>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

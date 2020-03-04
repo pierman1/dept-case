@@ -1,20 +1,25 @@
 <template>
-  <select
-    class="filter-select"
-    id="cars"
-    v-model="selected"
-    @change="onChange($event)"
-  >
-    <!-- Let's go for an empty value -->
-    <option value="">all {{ name }}</option>
-    <option
-      v-for="(option, index) in options"
-      :value="option"
-      :key="`options_${index}`"
+  <div>
+    <label :for="name">
+      {{ name }}
+    </label>
+    <select
+      class="filter-select"
+      :id="name"
+      v-model="selected"
+      @change="onChange($event)"
     >
-      {{ option }}
-    </option>
-  </select>
+      <!-- Let's go for an empty value -->
+      <option value="">all {{ name }}</option>
+      <option
+        v-for="(option, index) in options"
+        :value="option"
+        :key="`options_${index}`"
+      >
+        {{ option }}
+      </option>
+    </select>
+  </div>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to="/">
+  <nuxt-link aria-label="To project" to="/">
     <article class="case-base">
       <figure class="case-base__picture">
         <picture>
@@ -13,6 +13,7 @@
           />
           <img
             class="lazyload image"
+            :alt="data.caseParty"
             v-if="data.caseImage && !hideImage"
             :data-src="require(`~/assets/images/${data.caseImage}`)"
           />
