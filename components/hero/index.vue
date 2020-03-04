@@ -1,9 +1,9 @@
 <template>
   <section class="hero-large">
     <div class="container">
-      <!-- <h1>
-        Work
-      </h1> -->
+      <h2 class="title">
+        A summer island in the Netherlands
+      </h2>
     </div>
   </section>
 </template>
@@ -23,9 +23,10 @@ export default {
   background-image: url('~assets/images/florensis.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
+  align-items: center;
 
   @include mq($from: wide) {
-    height: 940px;
+    height: 100vh;
 
     &:before {
       content: '';
@@ -37,6 +38,13 @@ export default {
       right: 0;
       box-shadow: 0 0 0 20px #fff inset;
     }
+  }
+
+  .title {
+    font-size: 100px;
+    font-weight: 400;
+    width: 50%;
+    line-height: 1;
   }
 }
 </style>
