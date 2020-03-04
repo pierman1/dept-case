@@ -1,8 +1,18 @@
 <template>
   <div class="contact-form-container">
     <Form>
-      <input-field />
+      <input-field
+        name="Name"
+        :value.sync="firstName"
+        @update="update($event)"
+      />
+      <input-field name="Email" :value.sync="email" />
+      <input-field name="Message" :value.sync="message" />
     </Form>
+
+    {{ firstName }}
+    {{ email }}
+    {{ message }}
   </div>
 </template>
 
@@ -15,6 +25,18 @@ export default {
   components: {
     Form,
     InputField
+  },
+  data() {
+    return {
+      firstName: '',
+      email: '',
+      message: ''
+    }
+  },
+  methods: {
+    update(value) {
+      console.log('update', value)
+    }
   }
 }
 </script>
