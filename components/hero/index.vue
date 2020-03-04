@@ -1,8 +1,26 @@
 <template>
   <section class="hero-large">
+    <figure class="case-base__picture">
+      <picture>
+        <source
+          :data-srcset="require(`~/assets/images/${data.caseImage}?webp`)"
+          type="image/webp"
+        />
+        <source
+          :data-srcset="require(`~/assets/images/${data.caseImage}`)"
+          type="image/png"
+        />
+        <img
+          class="lazyload image"
+          :alt="data.caseParty"
+          :data-src="require(`~/assets/images/${data.caseImage}`)"
+        />
+      </picture>
+    </figure>
     <div class="container">
       <h2 class="title">
         A summer island in the Netherlands
+        {{ data.caseDescription }}
       </h2>
     </div>
   </section>
@@ -10,7 +28,12 @@
 
 <script>
 export default {
-  name: 'Hero'
+  name: 'Hero',
+  props: {
+    data: {
+      type: Object
+    }
+  }
 }
 </script>
 
@@ -24,6 +47,14 @@ export default {
   background-size: 100%;
   background-repeat: no-repeat;
   align-items: center;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
 
   @include mq($from: wide) {
     height: 100vh;
@@ -45,6 +76,11 @@ export default {
     font-weight: 400;
     width: 50%;
     line-height: 1;
+  }
+
+  .container {
+    padding: relative;
+    z-index: 1;
   }
 }
 </style>

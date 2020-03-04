@@ -92,7 +92,6 @@ export default {
     font-size: 1rem;
     padding: 0.75rem 0;
     border-bottom: 1px solid $dept-border-color;
-    resize: none;
     transition: 250ms all;
 
     &:focus {
@@ -102,7 +101,12 @@ export default {
   }
 
   textarea {
-    min-height: 97px;
+    line-height: 1.5;
+    padding: 1rem 0;
+
+    &:focus {
+      width: 100% !important;
+    }
   }
 
   .input__error {

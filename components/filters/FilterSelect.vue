@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="filter-select-container">
     <label :for="name">
       {{ name }}
     </label>
@@ -65,6 +65,16 @@ export default {
 
   option {
     font-size: 1rem;
+  }
+}
+
+.filter-select-container {
+  display: flex;
+  flex-direction: row;
+
+  label {
+    visibility: hidden;
+    display: none;
   }
 }
 </style>

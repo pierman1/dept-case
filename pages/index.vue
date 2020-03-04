@@ -1,6 +1,6 @@
 <template>
   <main>
-    <hero />
+    <hero :data="featuredCase" />
     <filters />
     <grid />
     <contact />
@@ -32,9 +32,10 @@ export default {
         params: query
       })
       .then((res) => {
-        console.log('response', res.data.cases)
+        console.log('response', res.data.featured)
         store.commit('cases/SET_CASES', res.data.cases)
         return {
+          featuredCase: res.data.featured,
           cases: res.data.cases
         }
       })
