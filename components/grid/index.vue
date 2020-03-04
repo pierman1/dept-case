@@ -9,17 +9,27 @@
           :data="item"
         />
       </div>
+      <quote
+        class="quote"
+        quote="Dept helped us tell our story through a bold new identity and a robust online experience. To the tune of 60% growth in online bookings in just one month."
+        :author="{
+          name: 'Mattijs den Brink',
+          role: 'CEO, Transavia'
+        }"
+      />
     </div>
   </div>
 </template>
 
 <script>
 import CaseBase from '@/components/case/CaseBase'
+import Quote from '@/components/quote'
 
 export default {
   name: 'Grid',
   components: {
-    CaseBase
+    CaseBase,
+    Quote
   },
   props: {
     items: {
@@ -80,6 +90,10 @@ pre {
 }
 
 .case-base {
+  width: 100%;
+}
+
+.quote {
   width: 100%;
 }
 </style>
