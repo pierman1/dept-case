@@ -2,6 +2,7 @@
   <main>
     <hero />
     <filters />
+    <grid />
   </main>
 </template>
 
@@ -9,11 +10,13 @@
 import axios from 'axios'
 import Hero from '~/components/hero/index.vue'
 import Filters from '~/components/filters/index.vue'
+import Grid from '~/components/grid/index.vue'
 
 export default {
   components: {
     Hero,
-    Filters
+    Filters,
+    Grid
   },
   data() {
     return {

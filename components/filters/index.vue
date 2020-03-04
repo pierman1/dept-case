@@ -18,10 +18,6 @@
         />
       </span>
     </div>
-
-    <pre>
-      {{ $store.state.cases.allCases }}
-    </pre>
   </div>
 </template>
 
