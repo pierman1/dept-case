@@ -52,7 +52,7 @@ export default {
   justify-content: center;
   position: relative;
 
-  @include mq($from: tablet) {
+  @include mq($from: mobile) {
     flex-direction: row;
   }
 
@@ -61,10 +61,10 @@ export default {
     max-width: 1200px;
     padding-top: 60px;
 
-    @include mq($from: tablet) {
+    @include mq($from: desktop) {
       padding-top: 100px;
       padding-bottom: 100px;
-      padding-right: 50px;
+      padding-right: 120px;
     }
 
     .container-inner {
@@ -96,7 +96,7 @@ export default {
     width: 100px;
     background-color: $dept-white;
 
-    @include mq($from: mobile) {
+    @include mq($from: desktop) {
       display: initial;
     }
   }
@@ -105,7 +105,7 @@ export default {
 .logo {
   display: none;
 
-  @include mq($from: mobile) {
+  @include mq($from: tablet) {
     width: 250px;
     display: initial;
   }
@@ -117,7 +117,7 @@ export default {
 
 .socials,
 .copyright {
-  @include mq($from: mobile) {
+  @include mq($from: tablet) {
     margin-left: auto;
   }
 }

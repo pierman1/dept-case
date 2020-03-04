@@ -65,7 +65,12 @@
     }
 
     &__item {
+      margin-bottom: 1rem;
       width: 1.875rem;
+
+      @include mq($from: mobile) {
+        margin-bottom: 0;
+      }
 
       svg {
         path {

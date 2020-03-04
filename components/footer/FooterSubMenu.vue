@@ -27,7 +27,7 @@ export default {
   font-size: 0.75rem;
   line-height: 1.6;
 
-  @include mq($from: mobile) {
+  @include mq($from: tablet) {
     padding-left: 250px;
   }
 
