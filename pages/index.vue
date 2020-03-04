@@ -21,7 +21,6 @@ export default {
     }
   },
   asyncData({ params, query, store }) {
-    console.log('asyncData', params, query)
     return axios
       .get('http://localhost:3000/api/v1/cases', {
         params: query

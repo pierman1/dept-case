@@ -1,6 +1,6 @@
 <template>
   <div class="scroll-up">
-    <button class="scroll-up__button">
+    <button class="scroll-up__button" @click="scrollUp">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="14"
@@ -18,6 +18,19 @@
     </button>
   </div>
 </template>
+
+<script lang="ts">
+export default {
+  methods: {
+    scrollUp() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .scroll-up {
