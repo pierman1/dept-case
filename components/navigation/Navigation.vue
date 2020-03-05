@@ -138,6 +138,16 @@ export default {
     menuOpen: (state) => state.menu.menuOpen
   }),
   mounted() {
+    document.addEventListener(
+      'keyup',
+      (e) => {
+        if ((e.key === 'Escape') | (e.code === 'Escape')) {
+          this.$store.commit('menu/CLOSE_MENU')
+        }
+      },
+      true
+    )
+
     this.$nextTick(() => {
       this.showMenuItems = true
     })
