@@ -2,7 +2,8 @@
   <main>
     <hero :data="featuredCase" />
     <filters />
-    <grid />
+    <grid v-if="$store.state.grid.gridType === 'grid'" />
+    <grid-list v-else />
     <contact />
   </main>
 </template>
@@ -13,13 +14,15 @@ import Hero from '~/components/hero/index.vue'
 import Filters from '~/components/filters/index.vue'
 import Contact from '~/components/contact/ContactSection.vue'
 import Grid from '~/components/grid/index.vue'
+import GridList from '~/components/grid/GridList.vue'
 
 export default {
   components: {
     Hero,
     Filters,
     Contact,
-    Grid
+    Grid,
+    GridList
   },
   data() {
     return {

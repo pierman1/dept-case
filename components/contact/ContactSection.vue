@@ -1,5 +1,5 @@
 <template>
-  <section class="contact-section">
+  <section class="contact-section" v-animate="'slide-up'">
     <div class="container">
       <div class="inner">
         <div class="col">

@@ -1,6 +1,6 @@
 <template>
-  <nuxt-link aria-label="To project" to="/">
-    <article class="case-base">
+  <nuxt-link aria-label="To project" to="/" v-animate="'slide-up'">
+    <article class="case-base" :class="type">
       <figure class="case-base__picture">
         <picture>
           <source
@@ -58,6 +58,10 @@ export default {
     hideImage: {
       type: Boolean,
       default: false
+    },
+    type: {
+      type: String,
+      default: ''
     }
   }
 }
@@ -133,6 +137,31 @@ export default {
       svg {
         margin-right: 20px;
       }
+    }
+  }
+
+  &.list {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $dept-border-color;
+
+    @include mq($from: mobile) {
+      width: 100%;
+    }
+
+    .case-base__picture {
+      margin: 0;
+      display: none;
+    }
+
+    .case-base__party,
+    .case-base__title {
+      margin: 0;
+      width: 100%;
     }
   }
 }

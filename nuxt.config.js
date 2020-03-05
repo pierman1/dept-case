@@ -27,6 +27,7 @@ module.exports = {
    ** Global CSS
    */
   css: [
+    '~/assets/scss/global.scss'
   ],
   /*
    ** Plugins to load before mounting the App
@@ -34,6 +35,10 @@ module.exports = {
   plugins: [
     {
       src: '~/plugins/lazysizes.client.js',
+      mode: 'client'
+    },
+    {
+      src: '~/plugins/onscroll-animate.client.js',
       mode: 'client'
     }
   ],

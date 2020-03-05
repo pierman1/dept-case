@@ -1,7 +1,7 @@
 <template>
   <blockquote>
     <div class="container">
-      <p>
+      <p v-animate="'slide-in'">
         {{ quote }}
       </p>
 
@@ -50,6 +50,7 @@ blockquote {
     margin-top: 2.5rem;
     margin-bottom: 3.75rem;
     max-width: 47.5rem;
+    overflow: hidden;
 
     @include mq($from: mobile) {
       margin-top: 5rem;

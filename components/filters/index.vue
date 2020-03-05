@@ -2,27 +2,37 @@
   <section class="filters">
     <div class="container">
       <span>
-        Show me all
-        <filter-select
-          name="type"
-          :options="['work', 'rebrand']"
-          @change="change"
-        />
+        Show me
       </span>
+      <filter-select
+        class="select"
+        name="type"
+        :options="['work', 'rebrand']"
+        @change="change"
+      />
       <span>
         in
-        <filter-select
-          name="industry"
-          :options="['fashion', 'ecom']"
-          @change="change"
-        />
       </span>
+      <filter-select
+        class="select"
+        name="industry"
+        :options="['fashion', 'ecom']"
+        @change="change"
+      />
+      <span>as</span>
+      <filter-select
+        class="select"
+        name="grid"
+        :options="['grid', 'list']"
+        @change="changeGridType"
+      />
     </div>
   </section>
 </template>
 
 <script>
 import axios from 'axios'
+import AOS from 'aos'
 import FilterSelect from './FilterSelect'
 
 export default {
@@ -41,12 +51,18 @@ export default {
           this.$store.commit('cases/SET_CASES', res.data.cases)
           this.$store.commit('cases/UNSET_LOADING')
         })
+        .finally(() => {
+          AOS.refreshHard()
+        })
     },
     change(e) {
       console.log('change', e)
       setTimeout(() => {
         this.getData()
       }, 200)
+    },
+    changeGridType(value) {
+      this.$store.commit('grid/SET_GRID_TYPE', value)
     }
   }
 }
@@ -61,6 +77,10 @@ export default {
   @include mq($from: mobile) {
     margin: 60px 0;
     font-size: 1.875rem;
+  }
+
+  .select {
+    margin: 0 0.5rem;
   }
 }
 
