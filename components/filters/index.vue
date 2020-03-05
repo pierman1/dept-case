@@ -62,7 +62,7 @@ export default {
       }, 200)
     },
     changeGridType(value) {
-      this.$store.commit('grid/SET_GRID_TYPE', value)
+      this.$store.commit('filters/SET_GRID_TYPE', value)
     }
   }
 }

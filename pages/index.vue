@@ -2,7 +2,7 @@
   <main>
     <hero :data="featuredCase" />
     <filters />
-    <grid v-if="$store.state.grid.gridType === 'grid'" />
+    <grid v-if="$store.state.filters.grid === 'grid'" />
     <grid-list v-else />
     <contact />
   </main>

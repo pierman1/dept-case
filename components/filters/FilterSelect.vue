@@ -48,6 +48,9 @@ export default {
       this.updateQueryString(this.name, e.target.value)
       this.$emit('change', e.target.value)
     }
+  },
+  mounted() {
+    this.selected = this.$store.state.filters[this.name]
   }
 }
 </script>

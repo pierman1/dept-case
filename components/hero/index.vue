@@ -18,10 +18,10 @@
       </picture>
     </figure>
     <div class="container">
-      <h2 class="title">
+      <!-- <h2 class="title">
         A summer island in the Netherlands
         {{ data.caseDescription }}
-      </h2>
+      </h2> -->
     </div>
   </section>
 </template>
