@@ -1,7 +1,7 @@
 export const state = () => ({
-  industry: '',
-  type: '',
-  grid: ''
+  industry: 'all industry',
+  type: 'all type',
+  grid: 'grid'
 })
 
 export const mutations = {
@@ -18,12 +18,18 @@ export const mutations = {
 
 export const actions = {
   setIndustry({ commit }, query) {
-    commit('SET_INDUSTRY', query.industry)
+    if (query.industry) {
+      commit('SET_INDUSTRY', query.industry)
+    }
   },
   setType({ commit }, query) {
-    commit('SET_TYPE', query.type)
+    if (query.type) {
+      commit('SET_TYPE', query.type)
+    }
   },
   setGridType({ commit }, query) {
-    commit('SET_GRID_TYPE', query.grid)
+    if (query.grid) {
+      commit('SET_GRID_TYPE', query.grid)
+    }
   }
 }

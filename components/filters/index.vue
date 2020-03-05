@@ -1,31 +1,34 @@
 <template>
   <section class="filters">
     <div class="container">
-      <span>
+      <span class="filters__row">
         Show me
+        <filter-select
+          class="select"
+          name="type"
+          :options="['work', 'rebrand']"
+          @change="change"
+        />
       </span>
-      <filter-select
-        class="select"
-        name="type"
-        :options="['work', 'rebrand']"
-        @change="change"
-      />
-      <span>
+      <span class="filters__row">
         in
+        <filter-select
+          class="select"
+          name="industry"
+          :options="['fashion', 'ecom']"
+          @change="change"
+        />
       </span>
-      <filter-select
-        class="select"
-        name="industry"
-        :options="['fashion', 'ecom']"
-        @change="change"
-      />
-      <span>as</span>
-      <filter-select
-        class="select"
-        name="grid"
-        :options="['grid', 'list']"
-        @change="changeGridType"
-      />
+      <span class="filters__row">
+        as
+        <filter-select
+          class="select"
+          name="grid"
+          :all-value="false"
+          :options="['grid', 'list']"
+          @change="changeGridType"
+        />
+      </span>
     </div>
   </section>
 </template>
@@ -81,6 +84,10 @@ export default {
 
   .select {
     margin: 0 0.5rem;
+  }
+
+  .filters__row {
+    display: flex;
   }
 }
 

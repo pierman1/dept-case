@@ -10,7 +10,7 @@
       @change="onChange($event)"
     >
       <!-- Let's go for an empty value -->
-      <option value="">all {{ name }}</option>
+      <option v-if="allValue" selected>all {{ name }}</option>
       <option
         v-for="(option, index) in options"
         :value="option"
@@ -36,6 +36,10 @@ export default {
     options: {
       type: Array,
       required: true
+    },
+    allValue: {
+      type: Boolean,
+      default: true
     }
   },
   data() {
@@ -45,8 +49,13 @@ export default {
   },
   methods: {
     onChange(e) {
-      this.updateQueryString(this.name, e.target.value)
-      this.$emit('change', e.target.value)
+      if (e.target.value.includes('all')) {
+        this.updateQueryString(this.name, '')
+        this.$emit('change', '')
+      } else {
+        this.updateQueryString(this.name, e.target.value)
+        this.$emit('change', e.target.value)
+      }
     }
   },
   mounted() {
@@ -64,16 +73,24 @@ export default {
   background-color: transparent;
   border: none;
   font-size: inherit;
-  border-bottom: 2px solid $brand-color;
-
-  option {
-    font-size: 1rem;
-  }
 }
 
 .filter-select-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  position: relative;
+  border-bottom: 2px solid $brand-color;
+  width: fit-content;
+
+  &:after {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background-image: url('../../assets/svg/icon-triangle-down.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   label {
     visibility: hidden;
