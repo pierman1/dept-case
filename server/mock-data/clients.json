@@ -1,0 +1,66 @@
+[
+  {
+    "name": "nivea",
+    "image": "Nivea_logo_zwart.png"
+  },
+  {
+    "name": "mona",
+    "image": "NN_logo_zwart.png"
+  },
+  {
+    "name": "transavia",
+    "image": "Transavia_logo_zwart.png"
+  },
+  {
+    "name": "zalando",
+    "image": "Zalando_logo_zwart.png"
+  },
+  {
+    "name": "tomtom",
+    "image": "Tomtom_logo_zwart.png"
+  },
+  {
+    "name": "unilever",
+    "image": "Unilever_logo_zwart.png"
+  },
+  {
+    "name": "adidas",
+    "image": "Adidas_logo_zwart.png"
+  },
+  {
+    "name": "pathe",
+    "image": "Pathe_logo_zwart.png"
+  },
+  {
+    "name": "abn",
+    "image": "ABN_logo_zwart.png"
+  },
+  {
+    "name": "triumph",
+    "image": "Triumph_logo_zwart.png"
+  },
+  {
+    "name": "microsoft",
+    "image": "Microsoft_logo_zwart.png"
+  },
+  {
+    "name": "oxxio",
+    "image": "Oxxio_logo_zwart.png"
+  },
+  {
+    "name": "nationale nederlanden",
+    "image": "NN_logo_zwart.png"
+  },
+  {
+    "name": "ziggo",
+    "image": "Ziggo_logo_zwart.png"
+  },
+  {
+    "name": "walibi",
+    "image": "Walibi_logo_zwart.png"
+  },
+  {
+    "name": "klm",
+    "image": "KLM_logo_zwart.png"
+  }
+]

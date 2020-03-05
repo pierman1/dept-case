@@ -4,6 +4,7 @@ const { Nuxt, Builder } = require('nuxt')
 const app = express()
 
 const cases = require('./mock-data/cases.json')
+const clients = require('./mock-data/clients.json')
 
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')
@@ -37,6 +38,14 @@ app.get('/api/v1/cases', (req, res) => {
     cases: getCases(req.query),
     featured: cases[Math.floor(Math.random() * cases.length) + 1]
   })
+});
+
+app.get('/api/v1/clients', (req, res) => {
+  res.status(200).send({
+    success: 'true',
+    message: 'Cases retrieved successfully',
+    clients: clients
+  });
 });
 
 async function start() {
