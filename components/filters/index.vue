@@ -58,7 +58,7 @@ export default {
     change(e) {
       setTimeout(() => {
         this.getData()
-      }, 250)
+      }, 200)
     },
     changeGridType(value) {
       this.$store.commit('filters/SET_GRID_TYPE', value)
