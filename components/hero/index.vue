@@ -119,8 +119,23 @@ export default {
     top: 50%;
     transform: translate(-50%, -50%);
 
+    picture {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include mq($from: mobile) {
+        display: initial;
+      }
+    }
+
     img {
-      width: 100%;
+      height: 375px;
+
+      @include mq($from: mobile) {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }
