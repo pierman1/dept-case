@@ -1,7 +1,7 @@
 <template>
   <section class="hero-large">
     <transition name="fade">
-      <figure class="hero-large__picture" v-if="visible">
+      <figure class="hero-large__figure" v-if="visible">
         <picture>
           <source
             :data-srcset="require(`~/assets/images/${data.caseImage}?webp`)"
