@@ -19,12 +19,22 @@
         </picture>
       </figure>
     </transition>
+    <transition name="fade">
+      <div class="container" v-if="visible">
+        <btn color="dark" title="View case" />
+      </div>
+    </transition>
   </section>
 </template>
 
 <script>
+import Btn from '@/components/button/BaseButton.vue'
+
 export default {
   name: 'Hero',
+  components: {
+    Btn
+  },
   props: {
     data: {
       type: Object
@@ -45,7 +55,7 @@ export default {
   height: 375px;
   background-size: 100%;
   background-repeat: no-repeat;
-  align-items: center;
+  align-items: flex-end;
   overflow: hidden;
 
   @include mq($from: wide) {
@@ -60,6 +70,31 @@ export default {
       bottom: 0;
       right: 0;
       box-shadow: 0 0 0 20px #fff inset;
+    }
+  }
+
+  .container {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background-color: $dept-white;
+    padding: 20px 20px 0;
+
+    @include mq($from: mobile) {
+      background-color: transparent;
+      height: 100%;
+      align-items: flex-end;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    @include mq($from: wide) {
+      padding-top: 80px;
+      padding-bottom: 80px;
     }
   }
 
@@ -79,13 +114,13 @@ export default {
 
   &__figure {
     width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
 
     img {
       height: 100%;
-      position: absolute;
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
 
       @include mq($from: tablet) {
         width: 100%;
