@@ -89,6 +89,11 @@ To make this website a Supercharge PWA, I use the following package: https://pwa
 
 I've set up two (really) simple tests to show the concept of testing in an enviorment like this.
 
+### Modern images
+All images are served as `webp` if browser supports it (see CaseBase.vue).
+
+Thanks to: https://github.com/bazzite/nuxt-optimized-images
+
 See `/test` for all tests.
 
 ```
