@@ -73,26 +73,58 @@ Store filters in query string.
 We use axios to get the data, if a data related query changes.
 So when you toggle `grid` to `list` only the querystring is updated and the store is called.
 
-## 3. Accesibility
+## Grid
+Not that special.
+I've added a feauture to toggle between a grid and a list view.
 
-- Able to navigate through whole website with tab, space, enter, escape.
-- Alt's provided
+Needs a refactor on Grid.vue, this thing got blown up a bit.. Maybe look for a CSS only solution?
 
-## 3. Lighthouse
-This website scored:
+## Lazyload images
+I lazyload all the grid images :fire:, to speed everything up!
 
-### PWA
-To make this website a Supercharge PWA, I use the following package: https://pwa.nuxtjs.org/
+## Clients
+Not that special.
 
-
-### Jest
-
-I've set up two (really) simple tests to show the concept of testing in an enviorment like this.
+Need to swap images on mobile so every client is seen.
 
 ### Modern images
 All images are served as `webp` if browser supports it (see CaseBase.vue).
 
 Thanks to: https://github.com/bazzite/nuxt-optimized-images
+
+## 3. Accesibility
+
+- Able to navigate through whole website with tab, space, enter, escape.
+- Alt's provided
+
+## 4. API
+See: `./server/index.js`
+
+I've added two REST endpoints to mock some data calls, to embrace SSR in combination with the filters in the URL.
+
+```
+/api/v1/cases
+/api/v1/clients
+```
+
+The only thing those endpoints do is serving and filtering json files (see: `./server/mock-data`).
+
+## 4. Optimalisation (Lighthouse)
+To test if our website is performing well I make use of Lighthouse by Google.
+
+This website scored:
+![Image description](./readme_images/lighthouse-score.png)
+
+Some score could be better but some colors in the design are not readable enough... That's why best practices is off.
+
+
+## Progressive Web App
+To make this website a Supercharge PWA, I used the following package: https://pwa.nuxtjs.org/
+
+
+### Jest (Unit tests)
+
+I've set up two (really) simple tests to show the concept of testing in an enviorment like this.
 
 See `/test` for all tests.
 
