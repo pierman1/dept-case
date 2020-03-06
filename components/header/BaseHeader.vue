@@ -41,19 +41,11 @@ export default {
       const currentScrollPosition =
         window.pageYOffset || document.documentElement.scrollTop
 
-      if (currentScrollPosition < 0) {
-        return
+      if (currentScrollPosition < 100) {
+        this.showNavbar = true
+      } else {
+        this.showNavbar = false
       }
-
-      if (
-        Math.abs(currentScrollPosition - this.lastScrollPosition) <
-        this.scrollTriggerDistance
-      ) {
-        return
-      }
-
-      this.showNavbar = currentScrollPosition < this.lastScrollPosition
-      this.lastScrollPosition = currentScrollPosition
     }
   },
   mounted() {

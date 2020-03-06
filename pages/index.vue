@@ -1,6 +1,6 @@
 <template>
   <main>
-    <hero :data="featuredCase" />
+    <hero :visible="visible" :data="featuredCase" />
     <filters />
     <grid v-if="$store.state.filters.grid === 'grid'" />
     <grid-list v-else />
@@ -29,7 +29,8 @@ export default {
   },
   data() {
     return {
-      data: ''
+      data: '',
+      visible: false
     }
   },
   asyncData({ params, query, store }) {
@@ -53,6 +54,9 @@ export default {
       .catch((err) => {
         console.log('err', err)
       })
+  },
+  mounted() {
+    this.visible = true
   }
 }
 </script>

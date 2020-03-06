@@ -1,7 +1,9 @@
 <template>
   <div>
     <base-header />
-    <nuxt />
+    <transition name="fade">
+      <nuxt />
+    </transition>
     <base-footer />
   </div>
 </template>

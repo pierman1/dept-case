@@ -1,27 +1,24 @@
 <template>
   <section class="hero-large">
-    <figure class="case-base__picture">
-      <picture>
-        <source
-          :data-srcset="require(`~/assets/images/${data.caseImage}?webp`)"
-          type="image/webp"
-        />
-        <source
-          :data-srcset="require(`~/assets/images/${data.caseImage}`)"
-          type="image/jpg"
-        />
-        <img
-          class="lazyload image"
-          :alt="data.caseParty"
-          :data-src="require(`~/assets/images/${data.caseImage}`)"
-        />
-      </picture>
-    </figure>
-    <div class="container">
-      <h2 class="title">
-        Work
-      </h2>
-    </div>
+    <transition name="fade">
+      <figure class="case-base__picture" v-if="visible">
+        <picture>
+          <source
+            :data-srcset="require(`~/assets/images/${data.caseImage}?webp`)"
+            type="image/webp"
+          />
+          <source
+            :data-srcset="require(`~/assets/images/${data.caseImage}`)"
+            type="image/jpg"
+          />
+          <img
+            class="lazyload image"
+            :alt="data.caseParty"
+            :data-src="require(`~/assets/images/${data.caseImage}`)"
+          />
+        </picture>
+      </figure>
+    </transition>
   </section>
 </template>
 
@@ -31,6 +28,10 @@ export default {
   props: {
     data: {
       type: Object
+    },
+    visible: {
+      type: Boolean,
+      default: false
     }
   }
 }
