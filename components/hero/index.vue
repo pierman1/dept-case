@@ -43,7 +43,6 @@ export default {
   position: relative;
   width: 100%;
   height: 375px;
-  // background-image: url('~assets/images/florensis.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   align-items: center;
@@ -62,6 +61,10 @@ export default {
       right: 0;
       box-shadow: 0 0 0 20px #fff inset;
     }
+  }
+
+  img {
+    width: 100%;
   }
 
   $min_width: 320px;
