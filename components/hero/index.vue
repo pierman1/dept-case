@@ -8,7 +8,7 @@
         />
         <source
           :data-srcset="require(`~/assets/images/${data.caseImage}`)"
-          type="image/png"
+          type="image/jpg"
         />
         <img
           class="lazyload image"
@@ -18,10 +18,9 @@
       </picture>
     </figure>
     <div class="container">
-      <!-- <h2 class="title">
-        A summer island in the Netherlands
-        {{ data.caseDescription }}
-      </h2> -->
+      <h2 class="title">
+        Work
+      </h2>
     </div>
   </section>
 </template>
@@ -43,18 +42,11 @@ export default {
   position: relative;
   width: 100%;
   height: 375px;
-  background-image: url('~assets/images/florensis.jpg');
+  // background-image: url('~assets/images/florensis.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   align-items: center;
   overflow: hidden;
-
-  img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 0;
-  }
 
   @include mq($from: wide) {
     height: 100vh;
@@ -71,16 +63,18 @@ export default {
     }
   }
 
+  $min_width: 320px;
+  $max_width: 1200px;
+  $min_font: 170px;
+  $max_font: 400px;
+
   .title {
     font-size: 100px;
     font-weight: 400;
+    text-transform: uppercase;
     width: 50%;
     line-height: 1;
-  }
-
-  .container {
-    padding: relative;
-    z-index: 1;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
   }
 }
 </style>

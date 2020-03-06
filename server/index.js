@@ -35,7 +35,7 @@ app.get('/api/v1/cases', (req, res) => {
     success: 'true',
     message: 'Cases retrieved successfully',
     cases: getCases(req.query),
-    featured: cases[Math.floor(Math.random() * cases.length) + 1]
+    featured: cases[Math.floor(Math.random() * cases.length)]
   })
 });
 
