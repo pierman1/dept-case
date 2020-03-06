@@ -1,6 +1,7 @@
 <template>
   <div class="client-grid">
     <client-grid-item
+      class="grid-item"
       v-for="(client, index) in clients"
       :key="`client_${index}`"
       :client="client"
@@ -20,11 +21,6 @@ export default {
     clients() {
       return this.$store.state.clients.allClients
     }
-  },
-  mounted() {
-    setInterval(() => {
-      this.$store.commit('clients/SHUFFLE')
-    }, 1000)
   }
 }
 </script>
@@ -35,10 +31,23 @@ export default {
   display: grid;
   align-items: start;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
 
-  @include mq($from: mobile) {
+  @include mq($from: tablet) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 30px;
+  }
+
+  .grid-item {
+    display: none;
+
+    &:nth-child(-n + 6) {
+      display: initial;
+    }
+
+    @include mq($from: tablet) {
+      display: initial;
+    }
   }
 }
 </style>

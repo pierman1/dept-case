@@ -29,7 +29,11 @@ export default {
 .client-section {
   text-align: center;
   background-color: $dept-light-blue;
-  padding-bottom: 6.25rem;
+  padding-bottom: 2.375rem;
+
+  @include mq($from: tablet) {
+    padding-bottom: 6.25rem;
+  }
 
   .title {
     font-weight: 400;

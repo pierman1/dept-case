@@ -73,8 +73,16 @@ export default {
   flex-direction: column;
   margin-bottom: 50px;
 
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
+
   @include mq($from: mobile) {
     margin-bottom: 80px;
+
+    &:last-of-type {
+      margin-bottom: 80px;
+    }
   }
 
   .image {

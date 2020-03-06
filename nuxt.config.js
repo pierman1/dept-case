@@ -75,7 +75,7 @@ module.exports = {
     optimizeImagesInDev: true,
     defaultImageLoader: 'img-loader',
     mozjpeg: {
-      quality: 85
+      quality: 50
     },
     optipng: false,
     pngquant: {

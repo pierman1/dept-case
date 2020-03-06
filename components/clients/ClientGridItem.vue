@@ -42,16 +42,4 @@ export default {
     max-width: 250px;
   }
 }
-
-.client-grid__client {
-  &:nth-of-type(-n + 10) {
-    display: none;
-  }
-
-  @include mq($from: tablet) {
-    &:nth-of-type(-n + 10) {
-      display: initial;
-    }
-  }
-}
 </style>
