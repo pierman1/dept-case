@@ -81,7 +81,16 @@ export default {
     width: 100%;
 
     img {
-      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+
+      @include mq($from: tablet) {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

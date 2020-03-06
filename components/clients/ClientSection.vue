@@ -1,6 +1,6 @@
 <template>
   <section class="client-section">
-    <div class="container container--flex">
+    <div class="container container--flex" v-animate="'slide-up'">
       <h2 class="title">
         Clients
       </h2>
@@ -9,7 +9,7 @@
         It’s why they often come to our parties. It’s also why we’re able to
         challenge and inspire them to reach for the stars.
       </p>
-      <client-grid class="client-grid" />
+      <client-grid class="client-grid" v-animate="'slide-up'" />
     </div>
   </section>
 </template>

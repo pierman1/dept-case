@@ -77,6 +77,11 @@ export default {
           transform: translate(0, -50%);
         }
       }
+
+      &:focus {
+        outline: none;
+        border: inherit;
+      }
     }
   }
 }

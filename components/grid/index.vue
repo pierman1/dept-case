@@ -3,7 +3,6 @@
     <div class="container container--flex" v-if="cases">
       <div class="wrapper">
         <case-base
-          class="case-base"
           v-for="(item, index) in cases.slice(0, 4)"
           :key="`case_${index}`"
           :data="item"
@@ -20,7 +19,6 @@
 
       <div class="wrapper">
         <case-base
-          class="case-base"
           v-for="(item, index) in cases.slice(7, 9)"
           :key="`case_${index}`"
           :data="item"
@@ -37,7 +35,6 @@
 
       <div class="wrapper">
         <case-base
-          class="case-base"
           v-for="(item, index) in cases.slice(13, 17)"
           :key="`case_${index}`"
           :data="item"
@@ -55,7 +52,6 @@
 
       <div class="wrapper">
         <case-base
-          class="case-base"
           v-for="(item, index) in cases.slice(17, 19)"
           :key="`case_${index}`"
           :data="item"
@@ -112,7 +108,7 @@ pre {
 
     @include mq($from: mobile) {
       display: grid;
-      grid-template-columns: 50% 50%;
+      grid-template-columns: 1fr 1fr;
       grid-gap: 30px;
     }
   }
@@ -133,10 +129,6 @@ pre {
       flex-direction: row;
     }
   }
-}
-
-.case-base {
-  width: 100%;
 }
 
 .quote {

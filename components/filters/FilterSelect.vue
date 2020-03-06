@@ -79,6 +79,11 @@ export default {
   background-color: transparent;
   border: none;
   font-size: inherit;
+
+  &:focus {
+    color: $dept-blue;
+    outline: none;
+  }
 }
 
 .filter-select-container {

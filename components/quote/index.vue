@@ -5,7 +5,7 @@
         {{ quote }}
       </p>
 
-      <div class="author">
+      <div class="author" v-animate="'slide-in'">
         <span>
           {{ author.name }}
         </span>

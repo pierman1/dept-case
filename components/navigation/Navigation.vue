@@ -286,6 +286,10 @@ export default {
             }
           }
         }
+
+        &:focus {
+          border-bottom: inherit;
+        }
       }
 
       &:last-of-type {

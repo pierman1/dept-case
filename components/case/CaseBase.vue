@@ -1,7 +1,7 @@
 <template>
   <nuxt-link aria-label="To project" to="/" v-animate="'slide-up'">
-    <article class="case-base" :class="type">
-      <figure class="case-base__picture">
+    <article class="case-base" :class="{ type, 'is-small': hideImage }">
+      <figure class="case-base__picture" v-if="data.caseImage && !hideImage">
         <picture>
           <source
             :data-srcset="require(`~/assets/images/${data.caseImage}?webp`)"
@@ -29,7 +29,7 @@
       </h2>
 
       <client-only>
-        <nuxt-link class="case-link" :to="`/cases/${data.id}`">
+        <nuxt-link tabindex="-1" class="case-link" :to="`/cases/${data.id}`">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="7"
@@ -71,18 +71,12 @@ export default {
 .case-base {
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin-bottom: 50px;
-
-  &:last-of-type {
-    margin-bottom: 0px;
-  }
+  transition: 250ms background-color;
 
   @include mq($from: mobile) {
     margin-bottom: 80px;
-
-    &:last-of-type {
-      margin-bottom: 80px;
-    }
   }
 
   .image {
@@ -111,13 +105,17 @@ export default {
     font-weight: bold;
     position: relative;
     color: $dept-blue;
-    display: flex;
+    display: none;
     flex-direction: row;
     align-items: center;
 
     svg {
       margin-right: 0.625rem;
       transition: 250ms margin-right;
+    }
+
+    @include mq($from: tablet) {
+      display: flex;
     }
   }
 
@@ -171,6 +169,17 @@ export default {
       margin: 0;
       width: 100%;
     }
+  }
+
+  &.is-small {
+    margin-bottom: 0;
+  }
+}
+
+a:focus {
+  border: inherit;
+  .case-base {
+    background-color: $dept-light-blue;
   }
 }
 </style>

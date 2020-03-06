@@ -27,13 +27,13 @@ export default {
   display: flex;
   flex-direction: column;
 
-  @include mq($from: mobile) {
+  @include mq($from: tablet) {
     flex-direction: row;
     flex-wrap: wrap;
   }
 
   &__column {
-    @include mq($from: mobile) {
+    @include mq($from: tablet) {
       width: 67%;
 
       &:nth-child(2) {
@@ -48,11 +48,12 @@ export default {
   &--rtl {
     .case-section__column {
       order: 2;
-      padding-right: 42px;
+      padding-right: 0;
 
       &:nth-child(2) {
         order: 1;
         padding-left: 0;
+        padding-right: 2.625rem;
       }
     }
   }

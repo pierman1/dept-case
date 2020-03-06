@@ -1,20 +1,20 @@
 <template>
-  <footer class="footer" v-animate="'slide-up'">
+  <footer class="footer">
     <div class="w-full">
       <div class="container">
-        <div class="container-inner">
-          <logo class="logo" is-white />
+        <div class="container-inner" v-animate="'slide-up'">
+          <logo class="logo" is-white v-animate="'slide-in'" />
           <footer-menu />
           <social-icons class="socials" />
         </div>
-        <div class="container-inner">
+        <div class="container-inner" v-animate="'slide-up'">
           <footer-sub-menu />
           <div class="copyright">© {{ date.getFullYear() }} Dept Agency</div>
         </div>
       </div>
     </div>
     <div class="scroll-up-container">
-      <scroll-up />
+      <scroll-up v-animate="'slide-up'" />
     </div>
   </footer>
 </template>
@@ -72,6 +72,7 @@ export default {
       display: flex;
       border-bottom: 2px solid $dept-border-color-dark;
       padding-bottom: 30px;
+      overflow: hidden;
 
       @include mq($from: mobile) {
         align-items: flex-end;

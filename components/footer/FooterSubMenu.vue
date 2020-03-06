@@ -8,7 +8,9 @@
         VAT: NL 8552.47.502.B01
       </li>
       <li>
-        Terms and conditions
+        <a href="/">
+          Terms and conditions
+        </a>
       </li>
     </ul>
   </div>
@@ -38,6 +40,13 @@ export default {
 
     li {
       margin-right: 2.5rem;
+      a {
+        color: inherit;
+
+        &:hover {
+          color: $dept-white;
+        }
+      }
     }
 
     @include mq($from: mobile) {

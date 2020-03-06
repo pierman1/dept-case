@@ -73,5 +73,10 @@ export default {
       }
     }
   }
+
+  &:focus {
+    border-bottom: 2px $dept-blue solid;
+    outline: 0;
+  }
 }
 </style>
