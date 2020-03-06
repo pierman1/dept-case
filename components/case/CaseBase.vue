@@ -1,7 +1,10 @@
 <template>
   <nuxt-link aria-label="To project" to="/" v-animate="'slide-up'">
-    <article class="case-base" :class="{ type, 'is-small': hideImage }">
-      <figure class="case-base__picture" v-if="data.caseImage && !hideImage">
+    <article class="case-base" :class="[type, { 'is-small': hideImage }]">
+      <figure
+        class="case-base__picture"
+        v-if="data.caseImage && !hideImage && type !== 'list'"
+      >
         <picture>
           <source
             :data-srcset="require(`~/assets/images/${data.caseImage}?webp`)"
@@ -73,7 +76,6 @@ export default {
   flex-direction: column;
   width: 100%;
   margin-bottom: 50px;
-  transition: 250ms background-color;
 
   @include mq($from: mobile) {
     margin-bottom: 80px;
@@ -162,6 +164,10 @@ export default {
     .case-base__picture {
       margin: 0;
       display: none;
+    }
+
+    .case-link {
+      display: flex;
     }
 
     .case-base__party,
