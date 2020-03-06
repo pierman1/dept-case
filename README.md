@@ -5,6 +5,8 @@
 I went more for the Technical Developer role, but I also like the visual part...
 Here you can find a short overview of what I did in the last days.
 
+Working example is running on: https://dept-case.herokuapp.com/
+
 ## Table of contents
 1. Build setup
 2. Tooling

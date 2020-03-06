@@ -1,7 +1,7 @@
 <template>
   <section class="hero-large">
     <transition name="fade">
-      <figure class="case-base__picture" v-if="visible">
+      <figure class="hero-large__picture" v-if="visible">
         <picture>
           <source
             :data-srcset="require(`~/assets/images/${data.caseImage}?webp`)"
@@ -63,9 +63,6 @@ export default {
     }
   }
 
-  img {
-    width: 100%;
-  }
 
   $min_width: 320px;
   $max_width: 1200px;
@@ -79,6 +76,14 @@ export default {
     width: 50%;
     line-height: 1;
     @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  }
+
+  &__figure {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
   }
 }
 </style>
