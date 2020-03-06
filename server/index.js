@@ -46,7 +46,7 @@ app.get('/api/v1/clients', (req, res) => {
     message: 'Cases retrieved successfully',
     clients: clients
   });
-});
+})
 
 async function start() {
   const nuxt = new Nuxt(config)
