@@ -91,7 +91,7 @@ export default {
     border: none;
     font-size: 1rem;
     padding: 0.75rem 0;
-    border-bottom: 1px solid $dept-border-color;
+    border-bottom: 1px solid $dept-border-color-light;
     transition: 250ms all;
 
     &:focus {

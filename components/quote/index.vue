@@ -44,7 +44,7 @@ export default {
 blockquote {
   width: 100%;
   margin: 0 auto;
-  border-top: $dept-border-color 2px solid;
+  border-top: $dept-border-color-light 2px solid;
 
   .container {
     margin-top: 2.25rem;
