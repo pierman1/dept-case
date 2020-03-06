@@ -17,6 +17,7 @@ import Contact from '~/components/contact/ContactSection.vue'
 import Grid from '~/components/grid/index.vue'
 import GridList from '~/components/grid/GridList.vue'
 import Clients from '~/components/clients/ClientSection.vue'
+import { API_URL } from '@/helpers/api.js'
 
 export default {
   components: {
@@ -36,8 +37,8 @@ export default {
   asyncData({ params, query, store }) {
     return axios
       .all([
-        axios.get('http://localhost:3000/api/v1/cases'),
-        axios.get('http://localhost:3000/api/v1/clients')
+        axios.get(`${API_URL}/api/v1/cases`),
+        axios.get(`${API_URL}/api/v1/clients`)
       ])
       .then(
         axios.spread((cases, clients) => {

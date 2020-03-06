@@ -36,6 +36,7 @@
 <script>
 import axios from 'axios'
 import FilterSelect from './FilterSelect'
+import { API_URL } from '@/helpers/api.js'
 
 export default {
   name: 'Filters',
@@ -46,7 +47,7 @@ export default {
     getData() {
       this.$store.commit('cases/SET_LOADING')
       axios
-        .get('http://localhost:3000/api/v1/cases', {
+        .get(`${API_URL}/api/v1/cases`, {
           params: this.$route.query
         })
         .then((res) => {
