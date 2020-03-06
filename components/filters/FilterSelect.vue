@@ -79,6 +79,7 @@ export default {
   background-color: transparent;
   border: none;
   font-size: inherit;
+  padding: 0;
 
   &:focus {
     color: $dept-blue;

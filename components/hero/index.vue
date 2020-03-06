@@ -113,6 +113,7 @@ export default {
   }
 
   &__figure {
+    height: 100%;
     width: 100%;
     position: absolute;
     left: 50%;
@@ -132,7 +133,7 @@ export default {
     img {
       height: 375px;
 
-      @include mq($from: mobile) {
+      @include mq($from: tablet) {
         width: 100%;
         height: auto;
       }

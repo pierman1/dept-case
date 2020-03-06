@@ -21,7 +21,7 @@
       </span>
       <span class="filters__row">
         <filter-select
-          label="in"
+          label="as"
           class="select"
           name="grid"
           :all-value="false"
