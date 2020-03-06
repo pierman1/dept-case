@@ -1,4 +1,4 @@
-import { createQueryStringFromObject } from '@/helpers/querystring.js'
+import { createQueryStringFromObject } from '@/helpers/queryString.js'
 
 const queryStringMixin = () => {
   return {
