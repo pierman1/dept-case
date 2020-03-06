@@ -9,6 +9,9 @@ Here you can find a short overview of what I did in the last days.
 1. Build setup
 2. Tooling
 3. Features
+4. Accesibility
+5. API
+6. Optimalisation
 
 ## 1. Build Setup
 
@@ -56,7 +59,7 @@ What did I use for this project?
   https://jestjs.io/<br>
   For unit-testing
 
-## 2. Features
+## 3. Features
 
 ### Hero
 Adjusted the design a bit here, to render different images (SSR).
@@ -87,17 +90,22 @@ Not that special.
 
 Need to swap images on mobile so every client is seen.
 
-### Modern images
+## Contact Form
+I use veevalidate to validate form rules.
+
+See: https://logaretm.github.io/vee-validate/
+
+## Modern images
 All images are served as `webp` if browser supports it (see CaseBase.vue).
 
 Thanks to: https://github.com/bazzite/nuxt-optimized-images
 
-## 3. Accesibility
+## 4. Accesibility
 
 - Able to navigate through whole website with tab, space, enter, escape.
 - Alt's provided
 
-## 4. API
+## 5. API
 See: `./server/index.js`
 
 I've added two REST endpoints to mock some data calls, to embrace SSR in combination with the filters in the URL.
@@ -109,7 +117,7 @@ I've added two REST endpoints to mock some data calls, to embrace SSR in combina
 
 The only thing those endpoints do is serving and filtering json files (see: `./server/mock-data`).
 
-## 4. Optimalisation (Lighthouse)
+## 6. Optimalisation (Lighthouse)
 To test if our website is performing well I make use of Lighthouse by Google.
 
 This website scored:
@@ -146,3 +154,5 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 ### Next steps
 
 - Add 404 and 500 page.
+- Add fancier animations
+- Add deploy scripts
