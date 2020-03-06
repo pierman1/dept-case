@@ -1,1 +1,1 @@
-export const API_URL = 'https://dept-case.herokuapp.com'
+export const API_URL = process.env.BASE_URL || 'http://localhost:3000'

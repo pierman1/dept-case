@@ -125,6 +125,8 @@ This website scored:
 
 Some score could be better but some colors in the design are not readable enough... That's why best practices is off.
 
+## Compression
+See: https://www.npmjs.com/package/nuxt-compress
 
 ## Progressive Web App
 To make this website a Supercharge PWA, I used the following package: https://pwa.nuxtjs.org/

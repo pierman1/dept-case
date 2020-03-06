@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" v-animate="'slide-up'">
     <div class="w-full">
       <div class="container">
         <div class="container-inner">
