@@ -47,10 +47,11 @@ blockquote {
   border-top: $dept-border-color 2px solid;
 
   .container {
-    margin-top: 2.5rem;
+    margin-top: 2.25rem;
     margin-bottom: 3.75rem;
     max-width: 47.5rem;
     overflow: hidden;
+    padding: 0;
 
     @include mq($from: mobile) {
       margin-top: 5rem;
@@ -74,6 +75,14 @@ blockquote {
     &:after {
       content: '”';
     }
+  }
+
+  .author {
+    color: $text-color-secondary;
+    font-family: 'Arial';
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 }
 </style>

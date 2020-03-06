@@ -35,7 +35,6 @@
 
 <script>
 import axios from 'axios'
-import AOS from 'aos'
 import FilterSelect from './FilterSelect'
 
 export default {
@@ -54,12 +53,8 @@ export default {
           this.$store.commit('cases/SET_CASES', res.data.cases)
           this.$store.commit('cases/UNSET_LOADING')
         })
-        .finally(() => {
-          AOS.refreshHard()
-        })
     },
     change(e) {
-      console.log('change', e)
       setTimeout(() => {
         this.getData()
       }, 200)

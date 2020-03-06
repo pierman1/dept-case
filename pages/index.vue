@@ -4,6 +4,7 @@
     <filters />
     <grid v-if="$store.state.filters.grid === 'grid'" />
     <grid-list v-else />
+    <clients />
     <contact />
   </main>
 </template>
@@ -15,6 +16,7 @@ import Filters from '~/components/filters/index.vue'
 import Contact from '~/components/contact/ContactSection.vue'
 import Grid from '~/components/grid/index.vue'
 import GridList from '~/components/grid/GridList.vue'
+import Clients from '~/components/clients/ClientSection.vue'
 
 export default {
   components: {
@@ -22,7 +24,8 @@ export default {
     Filters,
     Contact,
     Grid,
-    GridList
+    GridList,
+    Clients
   },
   data() {
     return {
@@ -31,17 +34,22 @@ export default {
   },
   asyncData({ params, query, store }) {
     return axios
-      .get('http://localhost:3000/api/v1/cases', {
-        params: query
-      })
-      .then((res) => {
-        console.log('response', res.data.featured)
-        store.commit('cases/SET_CASES', res.data.cases)
-        return {
-          featuredCase: res.data.featured,
-          cases: res.data.cases
-        }
-      })
+      .all([
+        axios.get('http://localhost:3000/api/v1/cases'),
+        axios.get('http://localhost:3000/api/v1/clients')
+      ])
+      .then(
+        axios.spread((cases, clients) => {
+          store.commit('cases/SET_CASES', cases.data.cases)
+          store.commit('cases/SET_CASES', cases.data.cases)
+          store.commit('clients/SET_CLIENTS', clients.data.clients)
+
+          return {
+            featuredCase: cases.data.featured,
+            cases: cases.data.cases
+          }
+        })
+      )
       .catch((err) => {
         console.log('err', err)
       })
