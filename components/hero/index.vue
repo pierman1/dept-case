@@ -63,7 +63,6 @@ export default {
     }
   }
 
-
   $min_width: 320px;
   $max_width: 1200px;
   $min_font: 170px;
