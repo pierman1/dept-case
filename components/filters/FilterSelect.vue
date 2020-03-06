@@ -1,24 +1,26 @@
 <template>
-  <div class="filter-select-container">
+  <div class="filter-select-container-outer">
     <label :for="name">
-      {{ name }}
+      {{ label }}
     </label>
-    <select
-      class="filter-select"
-      :id="name"
-      v-model="selected"
-      @change="onChange($event)"
-    >
-      <!-- Let's go for an empty value -->
-      <option v-if="allValue" selected>all {{ name }}</option>
-      <option
-        v-for="(option, index) in options"
-        :value="option"
-        :key="`options_${index}`"
+    <div class="filter-select-container">
+      <select
+        class="filter-select"
+        :id="name"
+        v-model="selected"
+        @change="onChange($event)"
       >
-        {{ option }}
-      </option>
-    </select>
+        <!-- Let's go for an empty value -->
+        <option v-if="allValue" selected>all {{ name }}</option>
+        <option
+          v-for="(option, index) in options"
+          :value="option"
+          :key="`options_${index}`"
+        >
+          {{ option }}
+        </option>
+      </select>
+    </div>
   </div>
 </template>
 
@@ -30,6 +32,10 @@ export default {
   mixins: [queryStringMixin],
   props: {
     name: {
+      type: String,
+      required: true
+    },
+    label: {
       type: String,
       required: true
     },
@@ -82,6 +88,7 @@ export default {
   position: relative;
   border-bottom: 2px solid $brand-color;
   width: fit-content;
+  margin-right: 0.5rem;
 
   &:after {
     content: '';
@@ -91,10 +98,14 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
   }
+}
+
+.filter-select-container-outer {
+  display: flex;
 
   label {
-    visibility: hidden;
-    display: none;
+    margin-right: 0.5rem;
+    border-bottom: 2px solid transparent;
   }
 }
 </style>

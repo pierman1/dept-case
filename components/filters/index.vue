@@ -2,8 +2,8 @@
   <section class="filters">
     <div class="container">
       <span class="filters__row">
-        Show me
         <filter-select
+          label="Show me"
           class="select"
           name="type"
           :options="['work', 'rebrand']"
@@ -11,8 +11,8 @@
         />
       </span>
       <span class="filters__row">
-        in
         <filter-select
+          label="in"
           class="select"
           name="industry"
           :options="['fashion', 'ecom']"
@@ -20,8 +20,8 @@
         />
       </span>
       <span class="filters__row">
-        as
         <filter-select
+          label="in"
           class="select"
           name="grid"
           :all-value="false"
@@ -76,10 +76,6 @@ export default {
   @include mq($from: mobile) {
     margin: 60px 0;
     font-size: 1.875rem;
-  }
-
-  .select {
-    margin: 0 0.5rem;
   }
 
   .filters__row {

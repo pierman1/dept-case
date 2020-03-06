@@ -16,7 +16,6 @@ export default {
   },
   methods: {
     submit(e) {
-      console.log('hierooo', e)
       this.$emit('submit')
     }
   }

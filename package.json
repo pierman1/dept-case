@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.9.5",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
     "aos": "^3.0.0-beta.6",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
@@ -60,4 +61,3 @@
     "vue-jest": "^3.0.5"
   }
 }
-  

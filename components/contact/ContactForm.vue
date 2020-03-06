@@ -36,10 +36,10 @@ export default {
   },
   methods: {
     update(value) {
-      console.log('update', value)
+      // console.log('update', value)
     },
     submit() {
-      console.log('submitForm')
+      // console.log('submitForm')
     }
   }
 }

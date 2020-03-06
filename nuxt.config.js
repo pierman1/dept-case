@@ -56,6 +56,7 @@ module.exports = {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/axios',
+    '@nuxtjs/pwa',
     '@bazzite/nuxt-optimized-images',
     "nuxt-compress"
   ],
