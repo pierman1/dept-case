@@ -14,6 +14,10 @@ body {
   @include mq($from: mobile) {
     margin: 0;
   }
+
+  &:before {
+    visibility: hidden;
+  }
 }
 
 a {

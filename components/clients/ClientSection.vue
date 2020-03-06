@@ -33,6 +33,7 @@ export default {
 
   @include mq($from: tablet) {
     padding-bottom: 6.25rem;
+    border-right: 30px solid $dept-white;
   }
 
   .title {
