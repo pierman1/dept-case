@@ -108,6 +108,7 @@ export default {
 
 .filter-select-container-outer {
   display: flex;
+  align-items: baseline;
 
   label {
     margin-right: 0.5rem;
