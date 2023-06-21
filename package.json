@@ -24,7 +24,7 @@
     "express": "^4.16.4",
     "intersection-observer": "^0.7.0",
     "lazysizes": "^5.2.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^3.4.3",
     "nuxt-compress": "^1.1.0",
     "nuxt-sass-resources-loader": "^2.0.5",
     "sass-mq": "^5.0.1",
